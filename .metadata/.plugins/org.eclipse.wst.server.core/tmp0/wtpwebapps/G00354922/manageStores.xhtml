@@ -14,7 +14,6 @@
 
 <h:body>
 	<h:form>
-	
 	<h:commandButton value="Add Store" action="addStore" />
 	
 		<h:dataTable value="#{storeController.stores}" var="s"
@@ -39,10 +38,13 @@
 	<h:column> 
 	<f:facet name="header">Action</f:facet>
 	
- 	<h:commandLink value="Show Products" action="storeDetails"/>
+ 	<h:commandLink value="Show Products" action="showProducts"/>
 	<h:commandLink value="Delete"/>
 	</h:column>
+	
 	</h:dataTable>
+	<h:commandLink value="Home Page" action="index"/>
+	
 	</h:form>
 	</h:body>
 </html>
