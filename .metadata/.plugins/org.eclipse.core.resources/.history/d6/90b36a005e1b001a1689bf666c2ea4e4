@@ -1,0 +1,16 @@
+package com.shops;
+
+import javax.faces.bean.ManagedBean;
+
+@ManagedBean
+public class Product {
+	int id;
+	String name;
+	String founded;
+	int prodId;
+	String prodName;
+	double price;
+	
+	
+	
+}
