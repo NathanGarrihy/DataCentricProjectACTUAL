@@ -4,9 +4,9 @@ import javax.faces.bean.ManagedBean;
 
 @ManagedBean
 public class Store {
-	int id;
-	String name;
-	String founded;
+	private int id;
+	private String name;
+	private String founded;
 	
 	public int getId() {
 		return id;

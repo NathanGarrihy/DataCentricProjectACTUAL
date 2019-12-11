@@ -37,7 +37,7 @@ public class ProductController {
 		}
 	}
 	
-	public String addProduct(Product p) {
+	public String addProducts(Product p) {
 		System.out.println(p.getSid() + " " + p.getName() + " " + p.getFounded() + " " + p.getProdId() + " " + p.getProdName() + " " + p.getPrice());
 		
 				try {
@@ -62,5 +62,13 @@ public class ProductController {
 
 	public ArrayList<Product> getProducts() {
 		return products;
+	}
+	
+	public void deleteProduct(Product p) {
+		try {
+			dao.deleteProduct(p.getProdId());
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
 	}
 }

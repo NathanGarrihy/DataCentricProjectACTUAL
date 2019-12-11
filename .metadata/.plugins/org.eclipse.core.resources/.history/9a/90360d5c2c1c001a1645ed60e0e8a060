@@ -1,0 +1,9 @@
+package com.shops;
+
+import java.sql.SQLIntegrityConstraintViolationException;
+import javax.faces.bean.ManagedBean;
+import javax.faces.bean.SessionScoped;
+
+public class OfficeController {
+	
+}

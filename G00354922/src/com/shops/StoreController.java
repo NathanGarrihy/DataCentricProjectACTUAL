@@ -1,5 +1,6 @@
 package com.shops;
 
+import java.sql.SQLException;
 import java.sql.SQLIntegrityConstraintViolationException;
 import java.util.ArrayList;
 
@@ -62,5 +63,16 @@ public class StoreController {
 
 	public ArrayList<Store> getStores() {
 		return stores;
+	}
+	
+	public void deleteStore(Store s) {
+		try {
+			dao.deleteStore(s.getId());
+		} catch (SQLIntegrityConstraintViolationException e) {
+			FacesMessage msg = new FacesMessage(s.getName() + " cannot be deleted from the database. Reason: It contains products.");
+			FacesContext.getCurrentInstance().addMessage(null, msg);
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}
 	}
 }
