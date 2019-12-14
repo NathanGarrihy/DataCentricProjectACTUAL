@@ -9,14 +9,18 @@
 </h:head>
 <h1>Add Office</h1>
 <br/>
+<h:body>
+	<h:messages globalOnly="true" style = "color:red;"/>
 <h:form>
 <h:outputLabel for="officeName">Office Name:</h:outputLabel>
-<h:inputText id="officeId" value="#{office.id}" required="true" requiredMessage="Office id is required"/>
+<h:inputText value="#{office.id}" required="true" requiredMessage="Office id is required"/>
 <br/>
 <h:outputLabel for="officeLocation">Location:</h:outputLabel>
-<h:inputText id="officeFounded" value="#{office.location}" required="true" requiredMessage="Office location is required"/>
+<h:inputText value="#{office.location}" required="true" requiredMessage="Office location is required"/>
 <br/>
 <h:commandButton id="submit-button" value="Submit" action="#{officeController.addOffice(office)}"/>
+<br/>
 <h:commandLink value="Home" action="index" />
 </h:form>
+</h:body>
 </html>

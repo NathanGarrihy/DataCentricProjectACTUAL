@@ -9,6 +9,8 @@
 </h:head>
 <h1>Add Store</h1>
 <br/>
+<h:body>
+<h:messages globalOnly="true" style = "color:red;"/>
 <h:form>
 <h:outputLabel for="storeName">Store Name:</h:outputLabel>
 <h:inputText id="storeName" value="#{store.name}" required="true" requiredMessage="Store name is required"/>
@@ -19,4 +21,5 @@
 <h:commandButton id="submit-button" value="Submit" action="#{storeController.addStore(store)}"/>
 <h:commandLink value="Home" action="index" />
 </h:form>
+</h:body>
 </html>

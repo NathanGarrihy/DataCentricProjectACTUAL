@@ -4,9 +4,11 @@ import javax.faces.bean.ManagedBean;
 
 @ManagedBean
 public class Office {
+	//	Variable declaration
 	private int id;
 	private String location;
 	
+	//	Getters and setters
 	public int getId() {
 		return id;
 	}

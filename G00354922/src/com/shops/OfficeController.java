@@ -9,11 +9,11 @@ import javax.faces.bean.SessionScoped;
 @ManagedBean
 @SessionScoped
 public class OfficeController {
-	//	variable declaration
+	//	Variable declaration
 	MongoDAO mongo;
 	ArrayList<Office> offices;
 	
-	//	constructor
+	//	Constructor
 	public OfficeController() {
 		super();
 		
@@ -24,6 +24,7 @@ public class OfficeController {
 		}
 	}
 	
+	//	Load offices method
 	public void loadOffice() {
 		System.out.println("Loading office...");
 		try {
@@ -32,11 +33,13 @@ public class OfficeController {
 			e.printStackTrace();
 		}	
 	}
-
+	
+	//	Get offices method
 	public ArrayList<Office> getOffice() {
 		return offices;
 	}
-
+	
+	//	Add offices method
 	public String addOffice(Office o) {
 		System.out.println("In addOffice()");
 		try {

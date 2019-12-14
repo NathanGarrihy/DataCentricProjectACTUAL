@@ -9,7 +9,7 @@ import com.mongodb.client.MongoCollection;
 import com.mongodb.client.MongoDatabase;
 
 public class MongoDAO {
-	
+	//	Variable declaration
 	String mongoDB = "storeHeadOfficeDB";
 	String mongoCollection = "storeHeadOffice";
 	
@@ -17,16 +17,14 @@ public class MongoDAO {
 	MongoDatabase database;
 	MongoCollection<Document> collection;
 	
-	
-	/* ======================================================================================================
-	 * Constructor
-	 * ====================================================================================================== */
+	//	Constructor
 	public MongoDAO() throws Exception {
 		mongoClient = new MongoClient();
 		database = mongoClient.getDatabase(mongoDB);
 		collection = database.getCollection(mongoCollection);
 	}
 	
+	//	Load Offices method
 	public ArrayList<Office> loadOffices() throws Exception {
 		ArrayList<Office> office = new ArrayList<Office>();
 		FindIterable<Document> officeDoc = collection.find();
@@ -41,8 +39,7 @@ public class MongoDAO {
 		return office;
 	}
 	
-	
-	
+	//	Add office method
 	public void addOffice(Office o) throws Exception 
 	{
 		Document doc = new Document();

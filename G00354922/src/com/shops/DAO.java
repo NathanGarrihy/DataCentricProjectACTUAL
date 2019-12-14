@@ -21,7 +21,8 @@ public DAO() throws Exception {
 	String jndiName = "java:comp/env/shops";
 	mysqlDS = (DataSource) context.lookup(jndiName);
 }
-	
+
+//	Load stores method
 public ArrayList<Store> loadStores() throws Exception {
 		
 		Connection conn = null;
@@ -49,6 +50,7 @@ public ArrayList<Store> loadStores() throws Exception {
 		return stores;
 }
 
+//	Load products method
 public ArrayList<Product> loadProducts() throws Exception {
 	
 	Connection conn = null;
@@ -78,6 +80,7 @@ public ArrayList<Product> loadProducts() throws Exception {
 	return products;
 }
 
+//	Load StoreProducts method
 public ArrayList<StoreProduct> loadStoreProducts(int i) throws Exception {
 	
 	Connection conn = null;
@@ -109,6 +112,7 @@ public ArrayList<StoreProduct> loadStoreProducts(int i) throws Exception {
 	return storeProducts;
 }
 
+//	Add Store method
 public void addStore(Store store) throws Exception {
 	
 	Connection conn = null;
@@ -126,6 +130,7 @@ public void addStore(Store store) throws Exception {
 	stmt.execute();	
 }
 
+//	Add product method
 public void addProduct(Product product) throws Exception {
 
 Connection conn = null;
@@ -145,6 +150,7 @@ stmt.setDouble(4, product.getPrice());
 stmt.execute();
 }
 
+//	Add StoreProduct Method
 public void addStoreProduct(StoreProduct storeProduct) throws Exception {
 
 Connection conn = null;
@@ -165,6 +171,7 @@ stmt.setDouble(6, storeProduct.getPrice());
 stmt.execute();
 }
 
+//	Delete store method
 public void deleteStore(int i) throws SQLException {
 	Connection conn = null;
 	PreparedStatement stmt = null;
@@ -178,6 +185,7 @@ public void deleteStore(int i) throws SQLException {
 	stmt.execute();
 }
 
+//	Delete product method
 public void deleteProduct(int i) throws SQLException {
 	Connection conn = null;
 	PreparedStatement stmt = null;

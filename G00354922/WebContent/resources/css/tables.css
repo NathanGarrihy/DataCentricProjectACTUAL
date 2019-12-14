@@ -5,7 +5,7 @@
 
 .table-header {
 	border-bottom:1px solid gray;
-	background:#0775d3;
+	background:#ff00ff;
 	margin-bottom: 22px;
 	padding:10px;
 	color: #FFFFFF;
@@ -14,7 +14,7 @@
 
 .table-odd-row {
 	border-top:1px solid #FFFFFF;
-	background:#D2DEEF;
+	background:#ff80ff;
 	text-align:left;
 }
  

@@ -16,9 +16,11 @@ import com.mysql.jdbc.exceptions.jdbc4.CommunicationsException;
 @ManagedBean
 @SessionScoped
 public class ProductController {
+	//	Variables
 	DAO dao;
 	ArrayList<Product> products;
 	
+	//	Constructor
 	public ProductController() {
 		super();
 		try {
@@ -28,6 +30,7 @@ public class ProductController {
 		}
 	}
 	
+	//	Load products method
 	public void loadProducts() {
 		System.out.println("In loadProducts()");
 		try {
@@ -37,6 +40,7 @@ public class ProductController {
 		}
 	}
 	
+	//	Add products method
 	public String addProducts(Product p) {
 		System.out.println(p.getSid() + " " + p.getName() + " " + p.getFounded() + " " + p.getProdId() + " " + p.getProdName() + " " + p.getPrice());
 		
@@ -59,11 +63,13 @@ public class ProductController {
 				}
 				return null;
 	}
-
+	
+	//	Get products method
 	public ArrayList<Product> getProducts() {
 		return products;
 	}
 	
+	//	Delete products method
 	public void deleteProduct(Product p) {
 		try {
 			dao.deleteProduct(p.getProdId());
